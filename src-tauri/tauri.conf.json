@@ -4,6 +4,7 @@
     "beforeBuildCommand": "pnpm build",
     "beforeDevCommand": "pnpm dev",
     "devPath": "http://localhost:3000",
+    "withGlobalTauri": true,
     "distDir": "../dist"
   },
   "package": {
@@ -12,7 +13,9 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "globalShortcut": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -56,10 +59,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
-        "resizable": true,
-        "title": "tauri-react-template",
-        "width": 800
+        "width": 500,
+        "height": 620,
+        "resizable": false,
+        "center": true
       }
     ]
   }
